@@ -5,11 +5,12 @@
     var url_string = window.location.href;
     var url = new URL(url_string);
     var t = url.searchParams.get("t");
-    console.log(t);
+    document.getElementById("displayContents").innerHTML += 
+              '<link rel="stylesheet" type="text/css" href="'+t+'" />';
    }
   </script>
 </head>
-<body onload="displayTheme()">
+<body onload="displayTheme()" id="displayContents">
 <h1>In Development</h1>
 <noscript><p><b>JavaScript seems to be disabled!</b> In order to see the theme preview, you'll need JavaScript enabled.</p></noscript>
 </body>
